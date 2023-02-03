@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAND CONVERTER</title>
+
+    <!-- css  css css css css css css css css css css  -->
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .maindiv{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 3px solid green; */
+
+
+        }
+
+        .main-conatainer{
+
+           border: 3px solid rgb(0, 0, 0);
+           margin-top: 20px;
+           text-align: center;
+           padding: 30px;
+           margin-top: 30px;
+           
+        }
+
+        .credit{
+            /* border: 4px solid yellowgreen;
+            
+            padding: 20px;
+            box-shadow: 13px 30px 39px 5px rgba(0,0,0,0.49);
+            -webkit-box-shadow: 13px 30px 39px 5px rgba(0,0,0,0.49);
+            -moz-box-shadow: 13px 30px 39px 5px rgba(0,0,0,0.49); */
+
+            margin-top: 30px;
+        }
+    
+        .TEXT{
+            
+            
+            /* border: 4px solid rgb(87, 10, 231); */
+            line-height: 40px;
+            box-shadow: 13px 30px 39px 5px rgba(0,0,0,0.49);
+            -webkit-box-shadow: 13px 30px 39px 5px rgba(0,0,0,0.49);
+            -moz-box-shadow: 13px 30px 39px 5px rgba(0,0,0,0.49);
+            
+        }
+
+        .button{
+            height: 30px;
+            width: 130px;
+            font-size: 20px;
+            background: rgb(104, 139, 236);
+            
+        }
+        .rules{
+            color : red;
+        }
+
+        input[type="bigha"], input[type="kata"],input[type="lessa"]{
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #f1f1f1;
+            text-align:center;
+            
+        }
+
+        #select{
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #f1f1f1;
+        }
+        .yelllowline{
+            height: 3px;
+            width: 400px;
+            background-color: rgb(0, 4, 253);
+            
+        }
+
+        
+
+        
+        
+    </style>
+
+
+   <!-- ecss  ecss ecss ecss ecss css css css css css css  -->
+    
+</head>
+<body>
+    <div class="maindiv">
+    <div class = "main-conatainer">
+    <div class="TEXT">
+    <h1>LAND CONVERTER</h1>
+    <div class="yelllowline"></div>
+    <h7>ALL FIELDS ARE REQUIRED <BR>IF 0 LESSA THEN TYPE = 0 <h7></h7>
+
+
+    <h3>Bigha</h3>
+    <input type="bigha" id = "bigha" placeholder="bigha">
+
+    <h3>Kata</h3>
+    <input type="kata" id = "kata" placeholder="kata">
+
+    <h3>Lesa</h3>
+    <input type="lessa" id ="lessa" placeholder="lessa"><br><br>
+    
+    <h3>CONVERT INTO</h3>
+
+    <select id = "select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option> 
+
+    </select></h3><br>
+
+    
+
+    <button id = "btn"onclick="convert()" class="button">Convert</button>
+</div>
+   
+    <div class="credit">
+    <h3>LAND COVERTER DEVLOPED BY <br>SHAHNAWAZ<br><br>// Still under construction <h3></h3>
+<h4>Need Help Cl +91 8399964358 <h4><br>
+<h7 class = "rules">
+    
+    Rules ::<br><br>
+    100 lessa = 1 bigha<br><br>
+    
+    1 bigha = 5 kata<br><br>
+    1 kata = 20 lessa <br><br>
+
+    
+
+
+</h7>
+</div>
+</div>
+</div>
+
+<!-- js jsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjsjs -->
+
+
+    <script>
+        function convert(){
+            var bigha = document.getElementById("bigha").value;
+            var kata = document.getElementById("kata").value;
+            var lessa = document.getElementById("lessa").value;
+            var select = document.getElementById("select").value;
+
+
+            if (select == "1"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+                alert (tenop + ("  Lessa Mati"))
+
+            }
+            
+            if (select == "2"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 2 parts 
+
+                var divide = (tenop) / 2
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+
+            if (select == "3"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 3 parts 
+
+                var divide = (tenop) / 3
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+             if (select == "4"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 4 parts 
+
+                var divide = (tenop) / 4
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+
+            if (select == "5"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 5 parts 
+
+                var divide = (tenop) / 5
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+
+            if (select == "6"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 6 parts 
+
+                var divide = (tenop) / 6
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+
+                if (select == "7"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 7 parts 
+
+                var divide = (tenop) / 7
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+            if (select == "8"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 8 parts 
+
+                var divide = (tenop) / 8
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+
+
+            if (select == "9"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 8 parts 
+
+                var divide = (tenop) / 9
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+
+
+              if (select == "10"){
+
+                var fstop = (bigha)*5
+                var sndop = fstop
+                var thrdop = (sndop)+parseInt(kata)
+                var frth = thrdop
+                var sixthop = (thrdop)*20
+                var sevop = sixthop
+                var eightop = sevop+parseInt(lessa)
+                var tenop = eightop
+
+                // Now dividing the Lessa into 10 parts 
+
+                var divide = (tenop) / 10
+                var elvnop = divide
+
+
+
+
+                alert ( elvnop + "  lessa Mati")
+
+
+            }
+            
+
+            
+
+            
+
+            
+
+        
+            
+            
+            
+
+
+
+
+            
+        }
+
+
+
+
+
+
+    </script>
+    
+    
+</body>
+
+</html>
